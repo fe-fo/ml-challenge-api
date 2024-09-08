@@ -1,8 +1,0 @@
-###
-GET http://www.ml-challenge-api.com/ HTTP/1.1
-content-type: application/json
-
-###
-GET http://www.ml-challenge-api.com/metrics HTTP/1.1
-content-type: application/json
-
