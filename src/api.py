@@ -1,11 +1,9 @@
 """ml-challenge-api"""
 
 from fastapi import FastAPI
-from prometheus_fastapi_instrumentator import Instrumentator
 import psutil
 
 app = FastAPI()
-Instrumentator().instrument(app).expose(app)
 
 @app.get("/list_devices/")
 def list_devices(mountpoint: str | None = None):
