@@ -2,6 +2,7 @@
 
 from fastapi import FastAPI
 import psutil
+from ..scripts.module import clean_folder
 
 app = FastAPI()
 
@@ -28,3 +29,7 @@ def list_devices(mountpoint: str | None = None):
     if mountpoint:
         return list(filter(lambda DeviceObject: DeviceObject.mountpoint == mountpoint, devicesList))
     return devicesList
+
+@app.post("/clean_tmp")
+def empty_tmp():
+    return clean_folder('/tmp')
