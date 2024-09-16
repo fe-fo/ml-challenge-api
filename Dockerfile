@@ -12,7 +12,7 @@ RUN pip3 install \
          fastapi[standard] \
          psutil
 
-COPY /src/api.py .
+COPY /src/*.py .
 
 EXPOSE 8080
 

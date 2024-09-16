@@ -1,8 +1,8 @@
 """ml-challenge-api"""
 
+from .module import clean_folder
 from fastapi import FastAPI
 import psutil
-from ..scripts.module import clean_folder
 
 app = FastAPI()
 
